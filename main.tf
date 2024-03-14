@@ -26,7 +26,7 @@ locals {
 }
 
 resource "aws_s3_bucket" "bucket" {
-  bucket = "pfertyk-test-website"
+  bucket = "bella-decorations-website"
 }
 
 resource "aws_s3_bucket_policy" "bucket_policy" {
