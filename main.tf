@@ -63,12 +63,15 @@ resource "aws_s3_bucket_policy" "bucket_policy" {
 }
 
 resource "aws_s3_object" "file" {
-  for_each     = fileset(path.module, "content/**/*.{html,css,js}")
+  for_each     = fileset(path.module, "content/**/*.{html,css,js,json,svg,png}")
   bucket       = aws_s3_bucket.bucket.id
   key          = replace(each.value, "/^content//", "")
   source       = each.value
   content_type = lookup(local.content_types, regex("\\.[^.]+$", each.value), null)
   etag         = filemd5(each.value)
+
+  # change if files change
+
 }
 
 resource "aws_s3_bucket_website_configuration" "hosting" {
