@@ -21,7 +21,10 @@ locals {
   content_types = {
     ".html" : "text/html",
     ".css" : "text/css",
-    ".js" : "text/javascript"
+    ".js" : "text/javascript",
+    ".json" : "application/json",
+    ".svg" : "image/svg+xml",
+    ".png" : "image/png",
   }
 }
 
@@ -41,6 +44,7 @@ resource "aws_s3_bucket_public_access_block" "bucket" {
 }
 
 resource "aws_s3_bucket_policy" "bucket_policy" {
+  depends_on = [ aws_s3_bucket.bucket, aws_s3_bucket_public_access_block.bucket]
   bucket = aws_s3_bucket.bucket.id
   policy = jsonencode(
     {
