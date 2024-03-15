@@ -29,6 +29,17 @@ resource "aws_s3_bucket" "bucket" {
   bucket = "bella-decorations-website"
 }
 
+resource "aws_s3_bucket_public_access_block" "bucket" {
+  bucket = aws_s3_bucket.bucket.id
+  block_public_acls       = false
+  block_public_policy     = false
+  ignore_public_acls      = false
+  restrict_public_buckets = false
+
+  depends_on = [aws_s3_bucket.bucket]
+
+}
+
 resource "aws_s3_bucket_policy" "bucket_policy" {
   bucket = aws_s3_bucket.bucket.id
   policy = jsonencode(
