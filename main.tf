@@ -18,6 +18,6 @@ provider "aws" {
 }
 
 module "s3_website" {
-  source = "github.com/Franco-Technologies/terraform-registry//modules/storage/s3_static_website"
+  source = "github.com/Franco-Technologies/terraform-registry//modules/storage/s3_static_website?ref=main"
   bucket_name = "www.belladecorations.com"  
 }
