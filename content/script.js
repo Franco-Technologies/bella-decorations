@@ -57,17 +57,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.onscroll = function() {shrinkLogo()};
+window.onresize = function() {shrinkLogo()};
 
 function shrinkLogo() {
+    
     const logo = document.getElementById("logo");
     const header = document.getElementById("header");
     const firstSection = document.querySelector('.section'); // Assuming .section is your first section
-
+    
+    if (window.innerWidth < 768) {
+        logo.style.height = "50px";
+        header.style.padding = "5px 0";
+        firstSection.style.paddingTop = "180px";
+        return;
+    }
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         logo.style.height = "50px";
         header.style.padding = "5px 0";
         firstSection.style.paddingTop = "180px"; // Adjusted based on the shrunk header size
-    } else if (document.body.scrollTop < 50 || document.documentElement.scrollTop < 50 && window.innerWidth > 768)
+    } else if (document.body.scrollTop < 50 || document.documentElement.scrollTop < 50){
         logo.style.height = "80px";
         header.style.padding = "20px 0";
         firstSection.style.paddingTop = "200px"; // Adjusted based on the original header size
