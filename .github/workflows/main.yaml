@@ -32,3 +32,5 @@ jobs:
       tf_dir: "./"
       tf_destroy: false # very dangerous, don't need it for this project so will leave it out!
       app_name: "appontifyapi"
+    secrets:
+      PAT: ${{ secrets.PAT }}
