@@ -67,7 +67,7 @@ function shrinkLogo() {
         logo.style.height = "50px";
         header.style.padding = "5px 0";
         firstSection.style.paddingTop = "180px"; // Adjusted based on the shrunk header size
-    } else {
+    } else if (document.body.scrollTop < 50 || document.documentElement.scrollTop < 50 && window.innerWidth > 768)
         logo.style.height = "80px";
         header.style.padding = "20px 0";
         firstSection.style.paddingTop = "200px"; // Adjusted based on the original header size
