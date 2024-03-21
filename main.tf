@@ -21,3 +21,7 @@ module "s3_website" {
   source = "github.com/Franco-Technologies/terraform-registry//modules/storage/s3_static_website?ref=main"
   bucket_name = "www.belladecorations.com"  
 }
+
+output "s3_bucket_website_endpoint" {
+  value = module.s3_website.output.website_url
+}
