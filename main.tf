@@ -23,5 +23,5 @@ module "s3_website" {
 }
 
 output "s3_bucket_website_endpoint" {
-  value = module.s3_website.output.website_url
+  value = module.s3_website.website_url
 }
