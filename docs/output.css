@@ -1311,3 +1311,10 @@ video {
     line-height: 1.75rem;
   }
 }
+
+@media (min-width: 1280px) {
+  .xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
