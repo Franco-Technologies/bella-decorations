@@ -79,3 +79,96 @@ window.addEventListener("resize", () => {
   overlay.classList.remove("opacity-50");
   overlay.classList.add("pointer-events-none");
 });
+
+// JavaScript for handling the modal
+
+// Select the body element
+const body = document.body;
+
+// Function to disable scroll
+const disableScroll = () => {
+  body.classList.add("overflow-hidden");
+};
+
+// Function to enable scroll
+const enableScroll = () => {
+  body.classList.remove("overflow-hidden");
+};
+
+// JavaScript for handling the modal with navigation
+const modal = document.getElementById("modal");
+const modalImage = document.getElementById("modal-image");
+const closeModal = document.getElementById("close-modal");
+const prevImage = document.getElementById("prev-image");
+const nextImage = document.getElementById("next-image");
+const galleryItems = document.querySelectorAll(".gallery-item");
+
+let currentIndex = 0;
+
+// Function to update the modal image
+const updateModalImage = (index) => {
+  const image = galleryItems[index];
+  if (image) {
+    modalImage.src = image.src;
+    currentIndex = index;
+  }
+};
+
+// Open modal when an image is clicked
+galleryItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    currentIndex = index;
+    updateModalImage(currentIndex);
+    modal.classList.remove("hidden");
+    disableScroll(); // Disable scroll when the modal is open
+  });
+});
+
+// Close modal
+closeModal.addEventListener("click", () => {
+  modal.classList.add("hidden");
+  enableScroll(); // Re-enable scroll when the modal is closed
+});
+
+// Navigate to the previous image
+prevImage.addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+  updateModalImage(currentIndex);
+});
+
+// Navigate to the next image
+nextImage.addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % galleryItems.length;
+  updateModalImage(currentIndex);
+});
+
+// Close modal when clicking outside the image
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.add("hidden");
+    enableScroll(); // Re-enable scroll when the modal is closed
+  }
+});
+
+// Add swipe functionality for touch devices
+let startX = 0;
+
+modal.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+modal.addEventListener("touchend", (e) => {
+  const endX = e.changedTouches[0].clientX;
+  const diffX = startX - endX;
+
+  if (diffX > 50) {
+    // Swipe left: Next image
+    currentIndex = (currentIndex + 1) % galleryItems.length;
+    updateModalImage(currentIndex);
+  } else if (diffX < -50) {
+    // Swipe right: Previous image
+    currentIndex =
+      (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    updateModalImage(currentIndex);
+  }
+});
