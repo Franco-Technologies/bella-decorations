@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decorating Dreams</title>
+    <link rel="stylesheet" href="output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playball&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-slate-100">
+    <header
+      id="header"
+      class="fixed top-0 w-full text-white shadow-md transition-transform duration-300"
+    >
+      <!-- Navbar -->
+      <nav
+        class="flex items-center justify-between py-8 px-4 bg-pink-500 text-white"
+      >
+        <div class="w-[24px]"></div>
+        <div class="text-3xl font-bold font-[playball] lg:text-4xl">
+          Bella Decorations
+        </div>
+        <!-- Hamburger Icon -->
+        <button id="menu-btn" class="block">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <div
+      id="drawer"
+      class="fixed top-0 right-0 w-64 h-full bg-pink-500 text-white shadow-lg transform translate-x-full transition-transform duration-300 z-20"
+    >
+      <button id="close-btn" class="absolute top-4 right-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+      <nav class="mt-16">
+        <ul class="space-y-4 p-4">
+          <li>
+            <a href="#hero" class="block p-2 hover:bg-pink-400 rounded">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="block p-2 hover:bg-pink-400 rounded"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="#gallery" class="block p-2 hover:bg-pink-400 rounded"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a href="#pricing" class="block p-2 hover:bg-pink-400 rounded"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="block p-2 hover:bg-pink-400 rounded"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Overlay -->
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-black opacity-0 pointer-events-none transition-opacity duration-300 z-10"
+    ></div>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="bg-pink-500 text-white p-8 bg-hero-pattern bg-cover bg-opacity-50 h-[400px] flex items-center justify-contents-center mt-16 md:h-[800px] lg:h-[1100px]"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('https://blog.preownedweddingdresses.com/wp-content/uploads/2022/06/10-wedding-balloon-decor-ideas-1-scaled-1.jpg');
+      "
+    >
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="flex flex-col justify-center items-center">
+            <div class="my-8">
+              <h1 class="text-3xl my-1 font-bold font-[playball] lg:text-5xl">
+                Make your parties pop!
+              </h1>
+              <p class="text-md text-center lg:text-lg">
+                Decoration artist based in Willard, OH
+              </p>
+            </div>
+            <!-- inquire now button -->
+            <button
+              class="p-2 bg-pink-500 text-white text-sm rounded-full mt-8 w-40 gap-2 flex items-center justify-center border border-white"
+            >
+              <a href="#contact">Inquire Now</a>
+              <svg
+                class="w-4 h-4 inline-block"
+                viewBox="0 0 32 32"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                fill="#ffffff"
+                stroke="#ffffff"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <title>arrow-right-circle</title>
+                  <desc>Created with Sketch Beta.</desc>
+                  <defs></defs>
+                  <g
+                    id="Page-1"
+                    stroke="none"
+                    stroke-width="1"
+                    fill="none"
+                    fill-rule="evenodd"
+                    sketch:type="MSPage"
+                  >
+                    <g
+                      id="Icon-Set"
+                      sketch:type="MSLayerGroup"
+                      transform="translate(-308.000000, -1087.000000)"
+                      fill="#ffffff"
+                    >
+                      <path
+                        d="M324,1117 C316.268,1117 310,1110.73 310,1103 C310,1095.27 316.268,1089 324,1089 C331.732,1089 338,1095.27 338,1103 C338,1110.73 331.732,1117 324,1117 L324,1117 Z M324,1087 C315.163,1087 308,1094.16 308,1103 C308,1111.84 315.163,1119 324,1119 C332.837,1119 340,1111.84 340,1103 C340,1094.16 332.837,1087 324,1087 L324,1087 Z M330.535,1102.12 L324.879,1096.46 C324.488,1096.07 323.855,1096.07 323.465,1096.46 C323.074,1096.86 323.074,1097.49 323.465,1097.88 L327.586,1102 L317,1102 C316.447,1102 316,1102.45 316,1103 C316,1103.55 316.447,1104 317,1104 L327.586,1104 L323.465,1108.12 C323.074,1108.51 323.074,1109.15 323.465,1109.54 C323.855,1109.93 324.488,1109.93 324.879,1109.54 L330.535,1103.88 C330.775,1103.64 330.85,1103.31 330.795,1103 C330.85,1102.69 330.775,1102.36 330.535,1102.12 L330.535,1102.12 Z"
+                        id="arrow-right-circle"
+                        sketch:type="MSShapeGroup"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col justify-center hidden md:block">
+            <h2 class="text-2xl">Get in Touch</h2>
+            <form id="contactForm" class="flex flex-col">
+              <input
+                type="text"
+                placeholder="Name"
+                class="p-2 border border-gray-300 rounded my-1 focus:outline-none focus:ring-0 focus:border-pink-500"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Email"
+                class="p-2 border border-gray-300 rounded my-1 focus:outline-none focus:ring-0 focus:border-pink-500"
+                required
+              />
+              <textarea
+                placeholder="Message"
+                class="p-2 border border-gray-300 rounded my-1 focus:outline-none focus:ring-0 focus:border-pink-500"
+                required
+              ></textarea>
+              <button
+                type="submit"
+                class="p-2 bg-pink-500 text-white rounded my-1"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-pink-500 text-gray-800 p-6">
+      <div class="container mx-auto my-8">
+        <div class="flex flex-row items-center justify-center gap-4">
+          <div class="flex flex-col justify-center w-32">
+            <img
+              src="https://st3.depositphotos.com/1007566/13175/v/450/depositphotos_131750410-stock-illustration-woman-female-avatar-character.jpg"
+              alt="Avatar"
+              class="rounded-full mx-auto"
+            />
+          </div>
+          <div
+            class="bg-white flex flex-col justify-center p-2 px-4 rounded font-bold"
+          >
+            <p class="text-md md:text-xl lg:text-2xl">
+              Hello, My name is Elsi.<br />I would love to make your event even
+              more special!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section (Instagram) -->
+    <section id="gallery" class="text-white py-0">
+      <div class="container mx-auto md:my-8 flex justify-center">
+        <blockquote
+          class="instagram-media"
+          data-instgrm-permalink="https://www.instagram.com/bella_decor01/?utm_source=ig_embed&amp;utm_campaign=loading"
+          data-instgrm-version="14"
+          style="
+            background: #fff;
+            border: 0;
+            border-radius: 3px;
+            box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5),
+              0 1px 10px 0 rgba(0, 0, 0, 0.15);
+            margin: 1px;
+            max-width: 540px;
+            min-width: 326px;
+            padding: 0;
+            width: 99.375%;
+            width: -webkit-calc(100% - 2px);
+            width: calc(100% - 2px);
+          "
+        >
+          <div style="padding: 16px">
+            <a
+              href="https://www.instagram.com/bella_decor01/?utm_source=ig_embed&amp;utm_campaign=loading"
+              style="
+                background: #ffffff;
+                line-height: 0;
+                padding: 0 0;
+                text-align: center;
+                text-decoration: none;
+                width: 100%;
+              "
+              target="_blank"
+            >
+              <div
+                style="display: flex; flex-direction: row; align-items: center"
+              >
+                <div
+                  style="
+                    background-color: #f4f4f4;
+                    border-radius: 50%;
+                    flex-grow: 0;
+                    height: 40px;
+                    margin-right: 14px;
+                    width: 40px;
+                  "
+                ></div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    flex-grow: 1;
+                    justify-content: center;
+                  "
+                >
+                  <div
+                    style="
+                      background-color: #f4f4f4;
+                      border-radius: 4px;
+                      flex-grow: 0;
+                      height: 14px;
+                      margin-bottom: 6px;
+                      width: 100px;
+                    "
+                  ></div>
+                  <div
+                    style="
+                      background-color: #f4f4f4;
+                      border-radius: 4px;
+                      flex-grow: 0;
+                      height: 14px;
+                      width: 60px;
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div style="padding: 19% 0"></div>
+              <div
+                style="
+                  display: block;
+                  height: 50px;
+                  margin: 0 auto 12px;
+                  width: 50px;
+                "
+              >
+                <svg
+                  width="50px"
+                  height="50px"
+                  viewBox="0 0 60 60"
+                  version="1.1"
+                  xmlns="https://www.w3.org/2000/svg"
+                  xmlns:xlink="https://www.w3.org/1999/xlink"
+                >
+                  <g
+                    stroke="none"
+                    stroke-width="1"
+                    fill="none"
+                    fill-rule="evenodd"
+                  >
+                    <g
+                      transform="translate(-511.000000, -20.000000)"
+                      fill="#000000"
+                    >
+                      <g>
+                        <path
+                          d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"
+                        ></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div style="padding-top: 8px">
+                <div
+                  style="
+                    color: #ec4899;
+                    font-family: Arial, sans-serif;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 550;
+                    line-height: 18px;
+                  "
+                >
+                  View this profile on Instagram
+                </div>
+              </div>
+              <div style="padding: 12.5% 0"></div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  margin-bottom: 14px;
+                  align-items: center;
+                "
+              >
+                <div>
+                  <div
+                    style="
+                      background-color: #f4f4f4;
+                      border-radius: 50%;
+                      height: 12.5px;
+                      width: 12.5px;
+                      transform: translateX(0px) translateY(7px);
+                    "
+                  ></div>
+                  <div
+                    style="
+                      background-color: #f4f4f4;
+                      height: 12.5px;
+                      transform: rotate(-45deg) translateX(3px) translateY(1px);
+                      width: 12.5px;
+                      flex-grow: 0;
+                      margin-right: 14px;
+                      margin-left: 2px;
+                    "
+                  ></div>
+                  <div
+                    style="
+                      background-color: #f4f4f4;
+                      border-radius: 50%;
+                      height: 12.5px;
+                      width: 12.5px;
+                      transform: translateX(9px) translateY(-18px);
+                    "
+                  ></div>
+                </div>
+                <div style="margin-left: 8px">
+                  <div
+                    style="
+                      background-color: #f4f4f4;
+                      border-radius: 50%;
+                      flex-grow: 0;
+                      height: 20px;
+                      width: 20px;
+                    "
+                  ></div>
+                  <div
+                    style="
+                      width: 0;
+                      height: 0;
+                      border-top: 2px solid transparent;
+                      border-left: 6px solid #f4f4f4;
+                      border-bottom: 2px solid transparent;
+                      transform: translateX(16px) translateY(-4px) rotate(30deg);
+                    "
+                  ></div>
+                </div>
+                <div style="margin-left: auto">
+                  <div
+                    style="
+                      width: 0px;
+                      border-top: 8px solid #f4f4f4;
+                      border-right: 8px solid transparent;
+                      transform: translateY(16px);
+                    "
+                  ></div>
+                  <div
+                    style="
+                      background-color: #f4f4f4;
+                      flex-grow: 0;
+                      height: 12px;
+                      width: 16px;
+                      transform: translateY(-4px);
+                    "
+                  ></div>
+                  <div
+                    style="
+                      width: 0;
+                      height: 0;
+                      border-top: 8px solid #f4f4f4;
+                      border-left: 8px solid transparent;
+                      transform: translateY(-4px) translateX(8px);
+                    "
+                  ></div>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  flex-grow: 1;
+                  justify-content: center;
+                  margin-bottom: 24px;
+                "
+              >
+                <div
+                  style="
+                    background-color: #f4f4f4;
+                    border-radius: 4px;
+                    flex-grow: 0;
+                    height: 14px;
+                    margin-bottom: 6px;
+                    width: 224px;
+                  "
+                ></div>
+                <div
+                  style="
+                    background-color: #f4f4f4;
+                    border-radius: 4px;
+                    flex-grow: 0;
+                    height: 14px;
+                    width: 144px;
+                  "
+                ></div></div
+            ></a>
+            <p
+              style="
+                color: #c9c8cd;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                line-height: 17px;
+                margin-bottom: 0;
+                margin-top: 8px;
+                overflow: hidden;
+                padding: 8px 0 7px;
+                text-align: center;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              "
+            >
+              <a
+                href="https://www.instagram.com/bella_decor01/?utm_source=ig_embed&amp;utm_campaign=loading"
+                style="
+                  color: #c9c8cd;
+                  font-family: Arial, sans-serif;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: normal;
+                  line-height: 17px;
+                "
+                target="_blank"
+                >Bella Decorations</a
+              >
+              (@<a
+                href="https://www.instagram.com/bella_decor01/?utm_source=ig_embed&amp;utm_campaign=loading"
+                style="
+                  color: #c9c8cd;
+                  font-family: Arial, sans-serif;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: normal;
+                  line-height: 17px;
+                "
+                target="_blank"
+                >bella_decor01</a
+              >) • Instagram photos and videos
+            </p>
+          </div>
+        </blockquote>
+        <script async src="//www.instagram.com/embed.js"></script>
+      </div>
+    </section>
+
+    <!-- Pricing cards with pics -->
+    <section id="pricing" class="bg-pink-500 p-6 mw-800">
+      <h2 class="text-2xl text-white md:text-center">Pricing</h2>
+      <div class="container mx-auto my-4">
+        <div class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div class="bg-white p-2 rounded-lg">
+            <img
+              src="https://www.ubackdrop.com/cdn/shop/files/SilverShimmerWallPanel_2fbc4ae1-58e7-4d44-a53e-ae12380f8a72.jpg?v=1724984864&width=1946"
+              alt="Gallery Image"
+              class="rounded-lg w-full h-56 object-cover"
+            />
+            <p class="text-md text-center">Backdrops</p>
+            <p class="text-sm font-bold text-center">$45-150</p>
+          </div>
+          <div class="bg-white p-2 rounded-lg">
+            <img
+              src="https://www.ubackdrop.com/cdn/shop/files/SilverShimmerWallPanel_2fbc4ae1-58e7-4d44-a53e-ae12380f8a72.jpg?v=1724984864&width=1946"
+              alt="Gallery Image"
+              class="rounded-lg w-full h-56 object-cover"
+            />
+            <p class="text-md text-center">Backdrops</p>
+            <p class="text-sm font-bold text-center">$45-150</p>
+          </div>
+          <div class="bg-white p-2 rounded-lg">
+            <img
+              src="https://www.ubackdrop.com/cdn/shop/files/SilverShimmerWallPanel_2fbc4ae1-58e7-4d44-a53e-ae12380f8a72.jpg?v=1724984864&width=1946"
+              alt="Gallery Image"
+              class="rounded-lg w-full h-56 object-cover"
+            />
+            <p class="text-md text-center">Backdrops</p>
+            <p class="text-sm font-bold text-center">$45-150</p>
+          </div>
+          <div class="bg-white p-2 rounded-lg">
+            <img
+              src="https://www.ubackdrop.com/cdn/shop/files/SilverShimmerWallPanel_2fbc4ae1-58e7-4d44-a53e-ae12380f8a72.jpg?v=1724984864&width=1946"
+              alt="Gallery Image"
+              class="rounded-lg w-full h-56 object-cover"
+            />
+            <p class="text-md text-center">Backdrops</p>
+            <p class="text-sm font-bold text-center">$45-150</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white text-black px-8 py-8">
+      <div class="flex justify-center items-center mb-8 gap-2">
+        <div
+          class="flex justify-center items-center gap-2 border-b-2 border-pink-500"
+        >
+          <h2 class="text-2xl font-bold text-center text-pink-500">
+            Contact Us
+          </h2>
+          <svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M10.3009 13.6949L20.102 3.89742M10.5795 14.1355L12.8019 18.5804C13.339 19.6545 13.6075 20.1916 13.9458 20.3356C14.2394 20.4606 14.575 20.4379 14.8492 20.2747C15.1651 20.0866 15.3591 19.5183 15.7472 18.3818L19.9463 6.08434C20.2845 5.09409 20.4535 4.59896 20.3378 4.27142C20.2371 3.98648 20.013 3.76234 19.7281 3.66167C19.4005 3.54595 18.9054 3.71502 17.9151 4.05315L5.61763 8.2523C4.48114 8.64037 3.91289 8.83441 3.72478 9.15032C3.56153 9.42447 3.53891 9.76007 3.66389 10.0536C3.80791 10.3919 4.34498 10.6605 5.41912 11.1975L9.86397 13.42C10.041 13.5085 10.1295 13.5527 10.2061 13.6118C10.2742 13.6643 10.3352 13.7253 10.3876 13.7933C10.4468 13.87 10.491 13.9585 10.5795 14.1355Z"
+                stroke="#eb4899"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="container mx-auto my-4">
+        <form id="contactForm" class="flex flex-col">
+          <input
+            type="text"
+            placeholder="Name"
+            class="p-2 border border-gray-300 rounded my-1 focus:outline-none focus:ring-0 focus:border-pink-500"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            class="p-2 border border-gray-300 rounded my-1 focus:outline-none focus:ring-0 focus:border-pink-500"
+            required
+          />
+          <textarea
+            placeholder="Message"
+            class="p-2 border border-gray-300 rounded my-1 focus:outline-none focus:ring-0 focus:border-pink-500"
+            required
+          ></textarea>
+          <button
+            type="submit"
+            class="p-2 mt-8 bg-pink-500 text-white rounded-full w-44 mx-auto gap-2 flex items-center justify-center"
+          >
+            Submit
+            <svg
+              class="w-4 h-4 inline-block"
+              viewBox="0 0 32 32"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+              fill="#ffffff"
+              stroke="#ffffff"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <title>arrow-right-circle</title>
+                <desc>Created with Sketch Beta.</desc>
+                <defs></defs>
+                <g
+                  id="Page-1"
+                  stroke="none"
+                  stroke-width="1"
+                  fill="none"
+                  fill-rule="evenodd"
+                  sketch:type="MSPage"
+                >
+                  <g
+                    id="Icon-Set"
+                    sketch:type="MSLayerGroup"
+                    transform="translate(-308.000000, -1087.000000)"
+                    fill="#ffffff"
+                  >
+                    <path
+                      d="M324,1117 C316.268,1117 310,1110.73 310,1103 C310,1095.27 316.268,1089 324,1089 C331.732,1089 338,1095.27 338,1103 C338,1110.73 331.732,1117 324,1117 L324,1117 Z M324,1087 C315.163,1087 308,1094.16 308,1103 C308,1111.84 315.163,1119 324,1119 C332.837,1119 340,1111.84 340,1103 C340,1094.16 332.837,1087 324,1087 L324,1087 Z M330.535,1102.12 L324.879,1096.46 C324.488,1096.07 323.855,1096.07 323.465,1096.46 C323.074,1096.86 323.074,1097.49 323.465,1097.88 L327.586,1102 L317,1102 C316.447,1102 316,1102.45 316,1103 C316,1103.55 316.447,1104 317,1104 L327.586,1104 L323.465,1108.12 C323.074,1108.51 323.074,1109.15 323.465,1109.54 C323.855,1109.93 324.488,1109.93 324.879,1109.54 L330.535,1103.88 C330.775,1103.64 330.85,1103.31 330.795,1103 C330.85,1102.69 330.775,1102.36 330.535,1102.12 L330.535,1102.12 Z"
+                      id="arrow-right-circle"
+                      sketch:type="MSShapeGroup"
+                    ></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- follow us -->
+    <section class="bg-pink-500 text-white px-6 py-4">
+      <div class="container mx-auto my-2">
+        <h2 class="text-md text-center my-4">Contact us</h2>
+        <div class="flex flex-row justify-center items-center gap-8">
+          <!-- instagram -->
+          <a
+            href="https://www.instagram.com/bella_decor01/"
+            target="_blank"
+            class="text-lg"
+          >
+            <svg
+              width="44px"
+              height="44px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                  fill="#ffffff"
+                ></path>
+                <path
+                  d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                  fill="#ffffff"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                  fill="#ffffff"
+                ></path>
+              </g>
+            </svg>
+          </a>
+          <!-- facebook -->
+          <a href="#" class="hidden text-lg">
+            <svg
+              width="44px"
+              height="44px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H15V13.9999H17.0762C17.5066 13.9999 17.8887 13.7245 18.0249 13.3161L18.4679 11.9871C18.6298 11.5014 18.2683 10.9999 17.7564 10.9999H15V8.99992C15 8.49992 15.5 7.99992 16 7.99992H18C18.5523 7.99992 19 7.5522 19 6.99992V6.31393C19 5.99091 18.7937 5.7013 18.4813 5.61887C17.1705 5.27295 16 5.27295 16 5.27295C13.5 5.27295 12 6.99992 12 8.49992V10.9999H10C9.44772 10.9999 9 11.4476 9 11.9999V12.9999C9 13.5522 9.44771 13.9999 10 13.9999H12V21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z"
+                  fill="#ffffff"
+                ></path>
+              </g>
+            </svg>
+          </a>
+          <!-- mail -->
+          <a href="mailto:yafri26@gmail.com" class="text-lg">
+            <svg
+              width="52px"
+              height="52px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M10 19H6.2C5.0799 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V8.2C3 7.0799 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H17.8C18.9201 5 19.4802 5 19.908 5.21799C20.2843 5.40973 20.5903 5.71569 20.782 6.09202C21 6.51984 21 7.0799 21 8.2V10M20.6067 8.26229L15.5499 11.6335C14.2669 12.4888 13.6254 12.9165 12.932 13.0827C12.3192 13.2295 11.6804 13.2295 11.0677 13.0827C10.3743 12.9165 9.73279 12.4888 8.44975 11.6335L3.14746 8.09863M14 21L16.025 20.595C16.2015 20.5597 16.2898 20.542 16.3721 20.5097C16.4452 20.4811 16.5147 20.4439 16.579 20.399C16.6516 20.3484 16.7152 20.2848 16.8426 20.1574L21 16C21.5523 15.4477 21.5523 14.5523 21 14C20.4477 13.4477 19.5523 13.4477 19 14L14.8426 18.1574C14.7152 18.2848 14.6516 18.3484 14.601 18.421C14.5561 18.4853 14.5189 18.5548 14.4903 18.6279C14.458 18.7102 14.4403 18.7985 14.405 18.975L14 21Z"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </a>
+          <!-- call -->
+          <a href="tel:+15029919285" class="text-lg">
+            <svg
+              width="44px"
+              height="44px"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-pink-500 text-white p-4 text-center">
+      <p>&copy; 2021 Bella Decorations</p>
+    </footer>
+  </body>
+
+  <script src="script.js"></script>
+</html>
