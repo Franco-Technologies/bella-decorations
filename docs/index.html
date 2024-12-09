@@ -240,21 +240,31 @@
           </div>
           <div class="flex flex-col justify-center hidden md:block">
             <h2 class="text-2xl">Get in Touch</h2>
-            <form id="contactForm" class="flex flex-col">
+            <form
+              id="contactForm"
+              class="flex flex-col text-black"
+              action="https://formspree.io/f/xpwzepep"
+              method="POST"
+            >
               <input
                 type="text"
                 placeholder="Name"
+                autocomplete="name"
+                name="name"
                 class="p-2 border border-gray-300 rounded my-1 focus:outline-none focus:ring-0 focus:border-pink-500"
                 required
               />
               <input
                 type="email"
                 placeholder="Email"
+                autocomplete="email"
+                name="email"
                 class="p-2 border border-gray-300 rounded my-1 focus:outline-none focus:ring-0 focus:border-pink-500"
                 required
               />
               <textarea
                 placeholder="Message"
+                name="message"
                 class="p-2 border border-gray-300 rounded my-1 focus:outline-none focus:ring-0 focus:border-pink-500"
                 required
               ></textarea>
@@ -882,21 +892,31 @@
       </div>
 
       <div class="container mx-auto my-4">
-        <form id="contactForm" class="flex flex-col">
+        <form
+          id="contactForm"
+          class="flex flex-col"
+          action="https://formspree.io/f/xpwzepep"
+          method="POST"
+        >
           <input
             type="text"
             placeholder="Name"
+            autocomplete="name"
+            name="name"
             class="p-2 border border-gray-300 rounded my-1 focus:outline-none focus:ring-0 focus:border-pink-500"
             required
           />
           <input
             type="email"
+            name="email"
+            autocomplete="email"
             placeholder="Email"
             class="p-2 border border-gray-300 rounded my-1 focus:outline-none focus:ring-0 focus:border-pink-500"
             required
           />
           <textarea
             placeholder="Message"
+            name="message"
             class="p-2 border border-gray-300 rounded my-1 focus:outline-none focus:ring-0 focus:border-pink-500"
             required
           ></textarea>
