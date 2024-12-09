@@ -59,18 +59,18 @@
   <body class="bg-slate-100">
     <header
       id="header"
-      class="fixed top-0 w-full text-white shadow-md transition-transform duration-300"
+      class="fixed bg-pink-500 top-0 w-full text-white shadow-md transition-transform duration-300 mx-auto"
     >
       <!-- Navbar -->
       <nav
-        class="flex items-center justify-between py-8 px-4 bg-pink-500 text-white"
+        class="flex items-center justify-between py-8 px-8 text-white max-w-[1600px] mx-auto"
       >
-        <div class="w-[24px]"></div>
+        <div class="w-[24px] md:hidden"></div>
         <div class="text-3xl font-bold font-[playball] lg:text-4xl">
           Bella Decorations
         </div>
         <!-- Hamburger Icon -->
-        <button id="menu-btn" class="block">
+        <button id="menu-btn" class="block md:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-6 w-6"
@@ -86,6 +86,32 @@
             />
           </svg>
         </button>
+
+        <!-- show menu on medium -->
+        <nav class="hidden md:block">
+          <ul class="flex space-x-4 p-4">
+            <li>
+              <a href="#hero" class="block p-2 hover:bg-pink-400 rounded"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#about" class="block p-2 hover:bg-pink-400 rounded"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="#gallery" class="block p-2 hover:bg-pink-400 rounded"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="block p-2 hover:bg-pink-400 rounded"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
       </nav>
     </header>
 
