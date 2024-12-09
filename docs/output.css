@@ -1229,6 +1229,14 @@ video {
     height: 800px;
   }
 
+  .md\:h-\[600px\] {
+    height: 600px;
+  }
+
+  .md\:h-\[650px\] {
+    height: 650px;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1246,6 +1254,10 @@ video {
 @media (min-width: 1024px) {
   .lg\:h-\[1100px\] {
     height: 1100px;
+  }
+
+  .lg\:h-\[800px\] {
+    height: 800px;
   }
 
   .lg\:text-2xl {
