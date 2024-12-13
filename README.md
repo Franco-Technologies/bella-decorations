@@ -13,7 +13,7 @@
     Landing page for the Bella Decorations website!
     <br />
     <br />
-    <a href="https://franco-technologies.github.io/bella-decorations">View Site</a>
+    <a href="https://belladecorations.site">View Site</a>
     ·
     <a href="https://github.com/Franco-Technologies/bella-decorations/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
@@ -25,8 +25,8 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://franco-technologies.github.io/bella-decorations)
+[![Product Name Screen Shot][product-screenshot]](https://belladecorations.site)
 
 This is a landing page for a Bella Decorations. The website is built using HTML, CSS, and JavaScript. The website is responsive and can be viewed on any device.
 
-[product-screenshot]: docs/sc.png
+[product-screenshot]: docs/assets/sc.png
