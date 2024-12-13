@@ -189,3 +189,35 @@ modal.addEventListener("touchend", (e) => {
     updateModalImage(currentIndex);
   }
 });
+
+const sections = document.querySelectorAll("section"); // All sections with an ID
+const navLinks = document.querySelectorAll("nav a"); // All navigation links
+const options = {
+  root: null, // Use the viewport as the root
+  rootMargin: "0px",
+  threshold: 0.5, // Trigger when 50% of the section is visible
+};
+
+// Intersection Observer to detect which section is in view
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+
+      // Update the active class on navigation links
+      navLinks.forEach((link) => {
+        if (link.getAttribute("href") === `#${id}`) {
+          link.classList.add("bg-pink-400"); // Add active class to the current link
+        } else {
+          link.classList.remove("bg-pink-400"); // Remove from non-active links
+        }
+      });
+
+      // Update the URL without refreshing
+      history.replaceState(null, "", `#${id}`);
+    }
+  });
+}, options);
+
+// Observe each section
+sections.forEach((section) => observer.observe(section));
