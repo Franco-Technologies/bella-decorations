@@ -1,36 +1,49 @@
-// Header behavior
 const header = document.getElementById("header");
 let lastScrollPosition = 0;
-let isNavigating = false; // Flag to track navigation through links
+let isNavigating = false; // Ignore scroll events during link navigation
 
-// Function to hide the header
 function hideHeader() {
-  header.style.transform = "translateY(-100%)";
+  header.classList.remove("translate-y-0");
+  header.classList.add("-translate-y-full");
 }
 
-// Function to show the header
 function showHeader() {
-  header.style.transform = "translateY(0)";
+  header.classList.remove("-translate-y-full");
+  header.classList.add("translate-y-0");
+}
+
+function makeHeaderTransparent() {
+  header.classList.remove("bg-pink-500");
+  header.classList.add("bg-transparent");
+}
+
+function makeHeaderPink() {
+  header.classList.remove("bg-transparent");
+  header.classList.add("bg-pink-500");
 }
 
 // Scroll event listener
 window.addEventListener("scroll", () => {
-  if (isNavigating) return; // Ignore scroll if navigating through links
+  if (isNavigating) return;
 
   const currentScrollPosition = window.scrollY;
 
+  // At the top of the page, always show transparent header
   if (currentScrollPosition <= header.clientHeight) {
-    // Show header when at the top of the page
     showHeader();
+    makeHeaderTransparent();
+    lastScrollPosition = currentScrollPosition;
     return;
   }
 
   if (currentScrollPosition > lastScrollPosition) {
-    // Hide header when scrolling down
+    // Scrolling down: hide header
     hideHeader();
+    makeHeaderTransparent();
   } else {
-    // Show header when scrolling up
+    // Scrolling up: show header and make it pink
     showHeader();
+    makeHeaderPink();
   }
 
   lastScrollPosition = currentScrollPosition;
@@ -98,6 +111,7 @@ const enableScroll = () => {
 // JavaScript for handling the modal with navigation
 const modal = document.getElementById("modal");
 const modalImage = document.getElementById("modal-image");
+const modalCaption = document.getElementById("modal-caption");
 const closeModal = document.getElementById("close-modal");
 const prevImage = document.getElementById("prev-image");
 const nextImage = document.getElementById("next-image");
@@ -111,6 +125,9 @@ const updateModalImage = (index) => {
   if (image) {
     modalImage.src = image.src;
     currentIndex = index;
+    // Update caption
+    const caption = image.alt;
+    modalCaption.textContent = caption;
   }
 };
 

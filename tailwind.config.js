@@ -7,7 +7,11 @@ module.exports = {
     fontFamily: {
       sans: ["Outfit", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        "pink-500": "#FF3D85",
+      },
+    },
   },
 
   plugins: [
