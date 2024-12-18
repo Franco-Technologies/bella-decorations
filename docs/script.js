@@ -93,19 +93,20 @@ window.addEventListener("resize", () => {
   overlay.classList.add("pointer-events-none");
 });
 
-// JavaScript for handling the modal
+// JavaScript for handling the modal with navigation
 
-// Select the body element
-const body = document.body;
+function preventDefault(e) {
+  e.preventDefault();
+}
 
-// Function to disable scroll
 const disableScroll = () => {
-  body.classList.add("overflow-hidden");
+  document.body.addEventListener("touchmove", preventDefault, {
+    passive: false,
+  });
 };
 
-// Function to enable scroll
 const enableScroll = () => {
-  body.classList.remove("overflow-hidden");
+  document.body.removeEventListener("touchmove", preventDefault);
 };
 
 // JavaScript for handling the modal with navigation
@@ -172,11 +173,15 @@ let startX = 0;
 
 modal.addEventListener("touchstart", (e) => {
   startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
 });
 
 modal.addEventListener("touchend", (e) => {
   const endX = e.changedTouches[0].clientX;
   const diffX = startX - endX;
+
+  const endY = e.changedTouches[0].clientY;
+  const diffY = startY - endY;
 
   if (diffX > 50) {
     // Swipe left: Next image
@@ -187,6 +192,10 @@ modal.addEventListener("touchend", (e) => {
     currentIndex =
       (currentIndex - 1 + galleryItems.length) % galleryItems.length;
     updateModalImage(currentIndex);
+  } else if (diffY > 50 || diffY < -50) {
+    // Swipe up/down: Close modal
+    modal.classList.add("hidden");
+    enableScroll(); // Re-enable scroll when the modal is closed
   }
 });
 
